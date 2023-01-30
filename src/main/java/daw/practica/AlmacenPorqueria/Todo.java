@@ -80,8 +80,29 @@ public class Todo {
             String tecnica = pepe.nextLine();
 
 
+        Pintorica registro = new Pintorica(id, como, autor, tecnico, piezas, piezas, id, piezas, desc, tecnica);
 
+        }else if (como.equals("Esculturas")){
+            System.out.println("Ponga el ID");
+            int id = pepe.nextInt();
+            System.out.println("Ponga el Autor");
+            String autor = pepe.nextLine();
+            System.out.println("Defina la Tecnica");
+            String tecnico = pepe.nextLine();
+            System.out.println("Ponga el Precio");
+            Double precio = pepe.nextDouble();
+            System.out.println("Ponga la Altura");
+            Double altura = pepe.nextDouble();
+            System.out.println("Ponga el Peso");
+            Double peso = pepe.nextDouble();
+            System.out.println("Ponga el número de piezas");
+            int piezas = pepe.nextInt();
+            System.out.println("Describa la Escultura");
+            String desc = pepe.nextLine();
+            System.out.println("Ponga el Material");
+            String material = pepe.nextLine();
 
+            Escultura registro = new Escultura(id, como, autor, tecnico, piezas, piezas, id, piezas, desc, material);
         }
 
 
