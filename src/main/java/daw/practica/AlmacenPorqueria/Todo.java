@@ -4,9 +4,10 @@ import daw.practica.obra.Galeria;
 
 import java.util.Scanner;
 
+import javax.sound.midi.Soundbank;
+
 import daw.practica.obra.Escultura;
 import daw.practica.obra.Pintorica;
-
 
 public class Todo {
 
@@ -20,7 +21,8 @@ public class Todo {
         System.out.print("¿Qué opción deseas?: ");
     }
 
-    static Pintorica guernica = new Pintorica(001, "Guernica", "P.Picasso", "Óleo", 1000, 5, 2, 5, "caudro guerra civil",
+    static Pintorica guernica = new Pintorica(001, "Guernica", "P.Picasso", "Óleo", 1000, 5, 2, 5,
+            "caudro guerra civil",
             "Óleo");
     static Pintorica lavie = new Pintorica(002, "lavie", "P.Picasso", "Óleo", 200, 1, 1, 1, "Óleo", "Óleo");
     static Pintorica elsueño = new Pintorica(003, "elsueño", "P.Picasso", "Óleo", 300, 1.3, 1, 1, "Óleo", "Óleo");
@@ -31,19 +33,58 @@ public class Todo {
 
     static Escultura[] totalDeEscultura = { elPielRoja };
     static Pintorica[] totalDePinturas = { guernica, lavie, elsueño, retratoDeDoraMaar };
+
     public static Escultura[] getTotalDeEscultura() {
         return totalDeEscultura;
     }
+
     public static void setTotalDeEscultura(Escultura[] totalDeEscultura) {
         Todo.totalDeEscultura = totalDeEscultura;
     }
+
     public static Pintorica[] getTotalDePinturas() {
         return totalDePinturas;
     }
+
     public static void setTotalDePinturas(Pintorica[] totalDePinturas) {
         Todo.totalDePinturas = totalDePinturas;
     }
 
-    
+    public static void AltaNuevaObra() {
+
+        Scanner pepe = new Scanner(System.in);
+        System.out.println("¿Qué quiere registar una Pintura o Escultura?");
+
+        String como = pepe.nextLine();
+        
+        System.out.println();
+        if ( como.equals("Pintura")){
+
+            System.out.println("Ponga el ID");
+            int id = pepe.nextInt();
+            System.out.println("Ponga el Autor");
+            String autor = pepe.nextLine();
+            System.out.println("Defina la Tecnica");
+            String tecnico = pepe.nextLine();
+            System.out.println("Ponga el Precio");
+            Double precio = pepe.nextDouble();
+            System.out.println("Ponga la Altura");
+            Double altura = pepe.nextDouble();
+            System.out.println("Ponga el Peso");
+            Double peso = pepe.nextDouble();
+            System.out.println("Ponga el número de piezas");
+            int piezas = pepe.nextInt();
+            System.out.println("Describa la pintura");
+            String desc = pepe.nextLine();
+            System.out.println("Defina la Tecnica");
+            String tecnica = pepe.nextLine();
+
+
+
+
+        }
+
+
+    }
 
 }
