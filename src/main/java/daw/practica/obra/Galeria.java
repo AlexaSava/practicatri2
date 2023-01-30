@@ -12,12 +12,14 @@ public class Galeria {
     /**
      * @param args
      */
-    public static void main(String[] args) {
-        final int VER_OBRAS = 1;
-        
-        final int NUMERO_ELEGIR_TOTAL = 7;
 
+    static final int VER_OBRAS = 1;
+    static final int DAR_ALTA_OBRA_NUEVA = 2;
+    static final int NUMERO_ELEGIR_TOTAL = 7;
 
+    public static void main(String[] args){
+    
+    
         Scanner pepe = new Scanner(System.in);
         System.out.println("Eliga una opción");
 
@@ -34,11 +36,9 @@ public class Galeria {
                     continue;
                 }
             }
-
+            
            
 
-            
+        }
 
         }
-    }
-
