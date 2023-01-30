@@ -1,10 +1,12 @@
 package daw.practica.obra;
 
-public class pintorica extends arte {
-    
+import java.util.Scanner;
+
+public class Pintorica extends Arte {
+
     private String tecnica;
 
-    public pintorica(int id, String nombre, String autor, String tecnico, double precio, double altura, double peso,
+    public Pintorica(int id, String nombre, String autor, String tecnico, double precio, double altura, double peso,
             int piezas, String desc, String tecnica) {
         super(id, nombre, autor, tecnico, precio, altura, peso, piezas, desc);
         this.tecnica = tecnica;
@@ -18,5 +20,5 @@ public class pintorica extends arte {
         this.tecnica = tecnica;
     }
 
-    
+   
 }

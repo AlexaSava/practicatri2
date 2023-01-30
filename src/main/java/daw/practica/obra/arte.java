@@ -1,6 +1,6 @@
 package daw.practica.obra;
 
-public class arte {
+public class Arte {
       private int id;
     private String nombre;
     private String autor;
@@ -11,9 +11,8 @@ public class arte {
     private int piezas;
     private String desc;
 
-
     
-    public arte(int id, String nombre, String autor, String tecnico, double precio, double altura, double peso,
+    public Arte(int id, String nombre, String autor, String tecnico, double precio, double altura, double peso,
             int piezas, String desc) {
         this.id = id;
         this.nombre = nombre;
@@ -26,5 +25,95 @@ public class arte {
         this.desc = desc;
     }
 
-    
+
+    public int getId() {
+        return id;
+    }
+
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+
+    public String getAutor() {
+        return autor;
+    }
+
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+
+    public String getTecnico() {
+        return tecnico;
+    }
+
+
+    public void setTecnico(String tecnico) {
+        this.tecnico = tecnico;
+    }
+
+
+    public double getPrecio() {
+        return precio;
+    }
+
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+
+    public double getAltura() {
+        return altura;
+    }
+
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+
+    public double getPeso() {
+        return peso;
+    }
+
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+
+    public int getPiezas() {
+        return piezas;
+    }
+
+
+    public void setPiezas(int piezas) {
+        this.piezas = piezas;
+    }
+
+
+    public String getDesc() {
+        return desc;
+    }
+
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+
 }

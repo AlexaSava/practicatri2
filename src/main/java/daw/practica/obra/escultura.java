@@ -1,10 +1,12 @@
 package daw.practica.obra;
 
-public class escultura extends arte{
-    
+import java.util.Scanner;
+
+public class Escultura extends Arte {
+
     private String material;
 
-    public escultura(int id, String nombre, String autor, String tecnico, double precio, double altura, double peso,
+    public Escultura(int id, String nombre, String autor, String tecnico, double precio, double altura, double peso,
             int piezas, String desc, String material) {
         super(id, nombre, autor, tecnico, precio, altura, peso, piezas, desc);
         this.material = material;
@@ -17,7 +19,6 @@ public class escultura extends arte{
     public void setMaterial(String material) {
         this.material = material;
     }
-    
-    
 
+    
 }
