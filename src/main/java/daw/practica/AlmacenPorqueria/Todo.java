@@ -106,9 +106,9 @@ public class Todo {
         }
     }
 
-    public void ModificarObra() {
+    public static void ModificarObra() {
         Scanner pepe = new Scanner(System.in);
-        System.out.println("¿Qué quiere modificar una Pintua o Escultura?");
+        System.out.println("¿Qué quiere modificar una Pintura o Escultura?");
 
         String como = pepe.nextLine();
         System.out.println();
@@ -149,9 +149,52 @@ public class Todo {
                     System.out.println("Ponga la Tecnica");
                     String tecnica = pepe.nextLine();
                     Todo.getTotalDePinturas()[i].setTecnica(tecnica);
-
                 }
             }
-        }
+                } else if (como.equals("Escultura")){
+                    System.out.println("Ponga el ID");
+                    int id = pepe.nextInt();
+                    for (int i = 0; i < Todo.getTotalDeEscultura().length; i++) {
+                        if (Todo.getTotalDeEscultura()[i].getId() == id) {
+                            System.out.println("Ponga un nuevo ID");
+                            id = pepe.nextInt();
+                            Todo.getTotalDeEscultura()[i].setId(id);
+                            System.out.println("Ponga un Nombre");
+                            pepe.nextLine();
+                            String nombre = pepe.nextLine();
+                            Todo.getTotalDeEscultura()[i].setNombre(nombre);
+                            System.out.println("Ponga un Autor");
+                            String autor = pepe.nextLine();
+                            Todo.getTotalDeEscultura()[i].setAutor(autor);
+                            System.out.println("Ponga un Tecnico");
+                            String tecnico = pepe.nextLine();
+                            Todo.getTotalDeEscultura()[i].setTecnico(tecnico);
+                            System.out.println("Ponga el Precio");
+                            Double precio = pepe.nextDouble();
+                            Todo.getTotalDeEscultura()[i].setPrecio(precio);
+                            System.out.println("Ponga una Altura");
+                            Double altura = pepe.nextDouble();
+                            Todo.getTotalDeEscultura()[i].setAltura(altura);
+                            System.out.println("Ponga un Peso");
+                            Double peso = pepe.nextDouble();
+                            Todo.getTotalDeEscultura()[i].setPeso(peso);
+                            System.out.println("Ponga las Piezas");
+                            int piezas = pepe.nextInt();
+                            Todo.getTotalDeEscultura()[i].setPiezas(piezas);
+                            System.out.println("Ponga la Descripción");
+                            String desc = pepe.nextLine();
+                            Todo.getTotalDeEscultura()[i].setDesc(desc);
+                            System.out.println("Ponga la Material");
+                            String material = pepe.nextLine();
+                            Todo.getTotalDeEscultura()[i].setMaterial(material);
+
+
+                        }
+
+                    }
+                }
+            
+        
     }
 }
+
