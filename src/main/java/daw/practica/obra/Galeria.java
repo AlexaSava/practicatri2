@@ -2,6 +2,7 @@ package daw.practica.obra;
 
 import java.util.Scanner;
 
+import javax.sql.rowset.CachedRowSet;
 import javax.sql.rowset.serial.SerialArray;
 
 import daw.practica.AlmacenPorqueria.Fors;
@@ -34,7 +35,14 @@ public class Galeria {
                     Fors.LeerPinturas();
                     Fors.LeerEsculturas();
                     continue;
+
+                    case DAR_ALTA_OBRA_NUEVA:
+                    Todo.AltaNuevaObra();
                 }
+
+                
+
+                
             }
             
            
