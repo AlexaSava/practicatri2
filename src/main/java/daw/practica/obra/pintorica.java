@@ -20,5 +20,4 @@ public class Pintorica extends Arte {
         this.tecnica = tecnica;
     }
 
-   
 }
