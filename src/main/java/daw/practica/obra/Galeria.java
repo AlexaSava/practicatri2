@@ -17,6 +17,7 @@ public class Galeria {
     static final int VER_OBRAS = 1;
     static final int DAR_ALTA_OBRA_NUEVA = 2;
     static final int MODIFICAR_OBRA = 3;
+    static final int VISUALIZAR_OBRA_ARTE = 4;
     static final int NUMERO_ELEGIR_TOTAL = 7;
 
     public static void main(String[] args){
@@ -43,6 +44,10 @@ public class Galeria {
 
                     case MODIFICAR_OBRA:
                     Todo.ModificarObra();
+                    continue;
+                    
+                    case VISUALIZAR_OBRA_ARTE:
+                    Todo.VisualizarObras();
                 }
 
                 
