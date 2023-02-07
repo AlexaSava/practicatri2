@@ -151,50 +151,82 @@ public class Todo {
                     Todo.getTotalDePinturas()[i].setTecnica(tecnica);
                 }
             }
-                } else if (como.equals("Escultura")){
-                    System.out.println("Ponga el ID");
-                    int id = pepe.nextInt();
-                    for (int i = 0; i < Todo.getTotalDeEscultura().length; i++) {
-                        if (Todo.getTotalDeEscultura()[i].getId() == id) {
-                            System.out.println("Ponga un nuevo ID");
-                            id = pepe.nextInt();
-                            Todo.getTotalDeEscultura()[i].setId(id);
-                            System.out.println("Ponga un Nombre");
-                            pepe.nextLine();
-                            String nombre = pepe.nextLine();
-                            Todo.getTotalDeEscultura()[i].setNombre(nombre);
-                            System.out.println("Ponga un Autor");
-                            String autor = pepe.nextLine();
-                            Todo.getTotalDeEscultura()[i].setAutor(autor);
-                            System.out.println("Ponga un Tecnico");
-                            String tecnico = pepe.nextLine();
-                            Todo.getTotalDeEscultura()[i].setTecnico(tecnico);
-                            System.out.println("Ponga el Precio");
-                            Double precio = pepe.nextDouble();
-                            Todo.getTotalDeEscultura()[i].setPrecio(precio);
-                            System.out.println("Ponga una Altura");
-                            Double altura = pepe.nextDouble();
-                            Todo.getTotalDeEscultura()[i].setAltura(altura);
-                            System.out.println("Ponga un Peso");
-                            Double peso = pepe.nextDouble();
-                            Todo.getTotalDeEscultura()[i].setPeso(peso);
-                            System.out.println("Ponga las Piezas");
-                            int piezas = pepe.nextInt();
-                            Todo.getTotalDeEscultura()[i].setPiezas(piezas);
-                            System.out.println("Ponga la Descripción");
-                            String desc = pepe.nextLine();
-                            Todo.getTotalDeEscultura()[i].setDesc(desc);
-                            System.out.println("Ponga la Material");
-                            String material = pepe.nextLine();
-                            Todo.getTotalDeEscultura()[i].setMaterial(material);
+        } else if (como.equals("Escultura")) {
+            System.out.println("Ponga el ID");
+            int id = pepe.nextInt();
+            for (int i = 0; i < Todo.getTotalDeEscultura().length; i++) {
+                if (Todo.getTotalDeEscultura()[i].getId() == id) {
+                    System.out.println("Ponga un nuevo ID");
+                    id = pepe.nextInt();
+                    Todo.getTotalDeEscultura()[i].setId(id);
+                    System.out.println("Ponga un Nombre");
+                    pepe.nextLine();
+                    String nombre = pepe.nextLine();
+                    Todo.getTotalDeEscultura()[i].setNombre(nombre);
+                    System.out.println("Ponga un Autor");
+                    String autor = pepe.nextLine();
+                    Todo.getTotalDeEscultura()[i].setAutor(autor);
+                    System.out.println("Ponga un Tecnico");
+                    String tecnico = pepe.nextLine();
+                    Todo.getTotalDeEscultura()[i].setTecnico(tecnico);
+                    System.out.println("Ponga el Precio");
+                    Double precio = pepe.nextDouble();
+                    Todo.getTotalDeEscultura()[i].setPrecio(precio);
+                    System.out.println("Ponga una Altura");
+                    Double altura = pepe.nextDouble();
+                    Todo.getTotalDeEscultura()[i].setAltura(altura);
+                    System.out.println("Ponga un Peso");
+                    Double peso = pepe.nextDouble();
+                    Todo.getTotalDeEscultura()[i].setPeso(peso);
+                    System.out.println("Ponga las Piezas");
+                    int piezas = pepe.nextInt();
+                    Todo.getTotalDeEscultura()[i].setPiezas(piezas);
+                    System.out.println("Ponga la Descripción");
+                    String desc = pepe.nextLine();
+                    Todo.getTotalDeEscultura()[i].setDesc(desc);
+                    System.out.println("Ponga la Material");
+                    String material = pepe.nextLine();
+                    Todo.getTotalDeEscultura()[i].setMaterial(material);
 
-
-                        }
-
-                    }
                 }
-            
-        
-    }
-}
 
+            }
+
+        }
+
+    }
+
+    public static void VisualizarObras() {
+        Scanner pepe = new Scanner(System.in);
+
+        System.out.println("¿Que quieres visualizar Pintura o Escultura?");
+
+        String como = pepe.nextLine();
+        System.out.println();
+        if (como.equals("Pintura")) {
+            System.out.println("Ponga el ID");
+            int id = pepe.nextInt();
+
+            for (int i = 0; i < Todo.getTotalDePinturas().length; i++) {
+                if (Todo.getTotalDePinturas()[i].getId() == id) {
+
+                    System.out.print(Todo.getTotalDePinturas()[i].getId() + " ");
+                    System.out.print(Todo.getTotalDePinturas()[i].getNombre() + " ");
+                    System.out.print(Todo.getTotalDePinturas()[i].getAutor() + " ");
+                    System.out.print(Todo.getTotalDePinturas()[i].getTecnico() + " ");
+                    System.out.print(Todo.getTotalDePinturas()[i].getPrecio() + " ");
+                    System.out.print(Todo.getTotalDePinturas()[i].getAltura() + " ");
+                    System.out.print(Todo.getTotalDePinturas()[i].getPeso() + " ");
+                    System.out.print(Todo.getTotalDePinturas()[i].getPiezas() + " ");
+                    System.out.print(Todo.getTotalDePinturas()[i].getDesc() + " ");
+
+                    System.out.println(" ");
+                }
+                System.out.println(" ");
+            }
+
+        }
+
+    }
+
+}
