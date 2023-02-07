@@ -224,6 +224,25 @@ public class Todo {
                 }
                 System.out.println(" ");
             }
+        } else if (como.equals("Escultura")) {
+            System.out.println("Ponga el ID");
+            int id = pepe.nextInt();
+            for (int i = 0; i < Todo.getTotalDeEscultura().length; i++) {
+                if (Todo.getTotalDeEscultura()[i].getId() == id) {
+                    System.out.print(Todo.getTotalDeEscultura()[i].getId() + " ");
+                    System.out.print(Todo.getTotalDeEscultura()[i].getNombre() + " ");
+                    System.out.print(Todo.getTotalDeEscultura()[i].getAutor() + " ");
+                    System.out.print(Todo.getTotalDeEscultura()[i].getTecnico() + " ");
+                    System.out.print(Todo.getTotalDeEscultura()[i].getPrecio() + " ");
+                    System.out.print(Todo.getTotalDeEscultura()[i].getAltura() + " ");
+                    System.out.print(Todo.getTotalDeEscultura()[i].getPeso() + " ");
+                    System.out.print(Todo.getTotalDeEscultura()[i].getPiezas() + " ");
+                    System.out.print(Todo.getTotalDeEscultura()[i].getDesc() + " ");
+
+                    System.out.println(" ");
+                }
+                System.out.println(" ");
+            }
 
         }
 
