@@ -245,7 +245,107 @@ public class Todo {
             }
 
         }
-
     }
 
+    public static void VentasPrecio() {
+        Scanner pepe = new Scanner(System.in);
+
+        System.out.println("¿Qué obras quieres obtener el precio?");
+
+        int id = pepe.nextInt();
+
+        final double PORCENTAJE = 0.25;
+
+        for (int i = 0; i < Todo.getTotalDePinturas().length; i++) {
+            if (Todo.getTotalDePinturas()[i].getId() == id) {
+                double ventas = Todo.getTotalDePinturas()[i].getPrecio()
+                        + (Todo.getTotalDePinturas()[i].getPrecio() * PORCENTAJE);
+
+                System.out.println("Nombre: " + Todo.getTotalDePinturas()[i].getNombre());
+                System.out.println("Altura: " + Todo.getTotalDePinturas()[i].getAltura());
+                System.out.println("Peso: " + Todo.getTotalDePinturas()[i].getPeso());
+                System.out.println("NºPiezas: " + Todo.getTotalDePinturas()[i].getPiezas());
+                System.out.println("Precio: " + Todo.getTotalDePinturas()[i].getPrecio());
+                System.out.println("Comisiones " + Galeria.PORCENTAJE);
+
+                if (Todo.getTotalDePinturas()[i].getPrecio() > 1) {
+                    ventas += 100;
+                    System.out.println("Precio por peso: " + Galeria.PORCENTAJE_PESO_MAX);
+                } else {
+                    ventas += 20;
+                    System.out.println("Precio por peso: " + Galeria.PORCENTAJE_PESO_MIN);
+                }
+
+                if (Todo.getTotalDePinturas()[i].getAltura() > 2) {
+                    ventas += 100;
+                    System.out.println("Precio por altura: " + Galeria.PORCENTAJE_ALTURA_MAX);
+                } else {
+                    ventas += 20;
+                    System.out.println("Precio por altura " + Galeria.PORCENTAJE_PESO_MIN);
+                }
+
+                if (Todo.getTotalDePinturas()[i].getPiezas() > 2) {
+                    ventas = ventas + ((Todo.getTotalDePinturas()[i].getPiezas() - 2) * 1);
+                    for (int y = 3; y <= Todo.getTotalDePinturas()[i].getPiezas(); y++) {
+                        System.out.println("Precio adicional - Pieza" + y + "(euros): " + Galeria.ADICIONALES);
+                    }
+                }
+
+                System.out.println("Precio venta (euros): " + ventas);
+                ventas = ventas - (ventas * Todo.getTotalDePinturas()[i].descuentoPintura());
+                System.out.println(
+                        "Descuento (10 óleo (euros))" + ventas * Todo.getTotalDePinturas()[i].descuentoPintura());
+                ventas = ventas * 0.99;
+
+                System.out.println("El precio final es " + ventas + "euros.");
+
+            }
+        }
+
+        for (int i = 0; i < Todo.getTotalDeEscultura().length; i++) {
+            if (Todo.getTotalDeEscultura()[i].getId() == id) {
+                double ventas = Todo.getTotalDeEscultura()[i].getPrecio()
+                        + (Todo.getTotalDeEscultura()[i].getPrecio() * PORCENTAJE);
+
+                System.out.println("Nombre: " + Todo.getTotalDeEscultura()[i].getNombre());
+                System.out.println("Altura: " + Todo.getTotalDeEscultura()[i].getAltura());
+                System.out.println("Peso: " + Todo.getTotalDeEscultura()[i].getPeso());
+                System.out.println("NºPiezas: " + Todo.getTotalDeEscultura()[i].getPiezas());
+                System.out.println("Precio: " + Todo.getTotalDeEscultura()[i].getPrecio());
+                System.out.println("Comisiones " + Galeria.PORCENTAJE);
+
+                if (Todo.getTotalDeEscultura()[i].getPrecio() > 1) {
+                    ventas += 100;
+                    System.out.println("Precio por peso: " + Galeria.PORCENTAJE_PESO_MAX);
+                } else {
+                    ventas += 20;
+                    System.out.println("Precio por peso: " + Galeria.PORCENTAJE_PESO_MIN);
+                }
+
+                if (Todo.getTotalDeEscultura()[i].getAltura() > 2) {
+                    ventas += 100;
+                    System.out.println("Precio por altura: " + Galeria.PORCENTAJE_ALTURA_MAX);
+                } else {
+                    ventas += 20;
+                    System.out.println("Precio por altura " + Galeria.PORCENTAJE_PESO_MIN);
+                }
+
+                if (Todo.getTotalDeEscultura()[i].getPiezas() > 2) {
+                    ventas = ventas + ((Todo.getTotalDeEscultura()[i].getPiezas() - 2) * 1);
+                    for (int y = 3; y <= Todo.getTotalDeEscultura()[i].getPiezas(); y++) {
+                        System.out.println("Precio adicional - Pieza" + y + "(euros): " + Galeria.ADICIONALES);
+                    }
+                }
+
+                System.out.println("Precio venta (euros): " + ventas);
+                ventas = ventas - (ventas * Todo.getTotalDeEscultura()[i].descuentoEscultura());
+                System.out.println(
+                        "Descuento (10 óleo (euros))" + ventas * Todo.getTotalDeEscultura()[i].descuentoEscultura());
+                ventas = ventas * 0.99;
+
+                System.out.println("El precio final es " + ventas + "euros.");
+                System.out.println("");
+            }
+        }
+    }
 }
