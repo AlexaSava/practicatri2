@@ -348,4 +348,43 @@ public class Todo {
             }
         }
     }
+
+    public static void ImprimirEtiqueta() {
+        Scanner pepe = new Scanner(System.in);
+        System.out.println("¿Qué etiqueta quiere imprimir?");
+        System.out.println();
+        
+            int id = pepe.nextInt();
+            for (int i = 0; i < Todo.getTotalDePinturas().length; i++) {
+                if (Todo.getTotalDePinturas()[i].getId() == id) {
+                    Todo.getTotalDePinturas()[i].setId(id);
+                    System.out.println("Ponga un Nombre");
+                    pepe.nextLine();
+                    String nombre = pepe.nextLine();
+                    Todo.getTotalDePinturas()[i].setNombre(nombre);
+                    System.out.println("Ponga un Autor");
+                    String autor = pepe.nextLine();
+                    System.out.println("Ponga la Descripción");
+                    String desc = pepe.nextLine();
+                    Todo.getTotalDePinturas()[i].setDesc(desc);
+
+                }
+            }
+
+        for (int i = 0; i < Todo.getTotalDeEscultura().length; i++) {
+                if (Todo.getTotalDeEscultura()[i].getId() == id) {
+                    Todo.getTotalDeEscultura()[i].setId(id);
+                    System.out.println("Ponga un Nombre");
+                    pepe.nextLine();
+                    String nombre = pepe.nextLine();
+                    Todo.getTotalDeEscultura()[i].setNombre(nombre);
+                    System.out.println("Ponga un Autor");
+                    String autor = pepe.nextLine();
+                    System.out.println("Ponga la Descripción");
+                    String desc = pepe.nextLine();
+                    Todo.getTotalDeEscultura()[i].setDesc(desc);
+
+                }
+        }
+    }
 }
