@@ -2,10 +2,7 @@ package daw.practica.AlmacenPorqueria;
 
 import daw.practica.obra.Galeria;
 
-import java.io.ObjectInputFilter.Status;
 import java.util.Scanner;
-
-import javax.sound.midi.Soundbank;
 
 import daw.practica.obra.Escultura;
 import daw.practica.obra.Pintorica;
