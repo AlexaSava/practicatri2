@@ -1,7 +1,5 @@
 package daw.practica.obra;
 
-import java.util.Scanner;
-
 public class Pintorica extends Arte {
 
     private String tecnica;
@@ -20,4 +18,9 @@ public class Pintorica extends Arte {
         this.tecnica = tecnica;
     }
 
+    public double descuentoPintura(){
+        double descuento = getPrecio() - (getPrecio() * 0.10);
+        return descuento;
+
+    }
 }
