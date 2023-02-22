@@ -1,7 +1,5 @@
 package daw.practica.obra;
 
-import java.util.Scanner;
-
 public class Escultura extends Arte {
 
     private String material;
@@ -19,6 +17,10 @@ public class Escultura extends Arte {
     public void setMaterial(String material) {
         this.material = material;
     }
+    public double descuentoEscultura(){
+        double descuento = getPrecio() - (getPrecio() * 0.10);
+        return descuento;
 
+    }
     
 }
